@@ -1,0 +1,84 @@
+.container{
+  width: 80vw;
+  height: 80vh;
+  border-radius: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include translate(-50%, -50%);
+  > *{
+    vertical-align: top;
+  }
+  aside.months{
+    display: inline-block;
+    width: 15vw;
+    height: 80vh;
+  }
+  main{
+    display: inline-block;
+    width: 45vw;
+    height: 80vh;
+    header{
+      height: 8vh;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      border-right: 1px solid $tekst;
+      border-bottom: 1px solid $tekst;
+      h1{
+        @include font-size(22px);
+        color: $blue;
+        font-weight: 600;
+        display: inline-block;
+        line-height: 100%;
+        span{
+          @include font-size(18px);
+          margin-left: 10px;
+          font-weight: 400;
+          color: $tekstdark;
+        }
+      }
+      button{
+        background: none;
+        border: $tekst solid 1px;
+        border-radius: 50%;
+        color: $tekst;
+        width: 30px;
+        height: 30px;
+        @include font-size(18px);
+        float: right;
+      }
+    }
+    .calender{
+      .days{
+        height: 5vh;
+        span{
+          display: inline-block;
+          width: 14.28571428571429%;
+          line-height: 100%;
+          // text-align: center;
+          padding: 12px 5px;
+          box-sizing: border-box;
+        }
+      }
+      ul{
+        height: 67vh;
+        font-size: 0;
+        li{
+          @include font-size(14px);
+          display: inline-block;
+          width: 13.99%;
+          height: 16.66666666666667%;
+          border-right: 1px solid $tekst;
+          border-top: 1px solid $tekst;
+        }
+      }
+    }
+  }
+  aside.appointments{
+    display: inline-block;
+    width: 20vw;
+    height: 80vh;
+  }
+}

@@ -1,0 +1,19 @@
+body{
+  background-color: $blue;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  @include font-size(14px);
+  position: relative;
+  &::before{
+    content: "";
+    display: block;
+    background-color: $red;
+    width: 80vw;
+    height: 100vh;
+    margin-left: -35vw;
+    position:absolute;
+    top: 0;
+    z-index: -1;
+    @include skew(-18, 0);
+  }
+}
